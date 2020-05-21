@@ -1,6 +1,7 @@
-﻿<Project Sdk="MSBuild.Sdk.Extras">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="MSBuild.Sdk.Extras">
   <PropertyGroup>
-    <TargetFrameworks>net46;net47</TargetFrameworks>
+    <TargetFrameworks>net46;net472</TargetFrameworks>
     <AssemblyName>Orc.LicenseManager.Server</AssemblyName>
     <RootNamespace>Orc.LicenseManager.Server</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
@@ -14,7 +15,6 @@
     <!-- SonarQube requires a project guid -->
     <ProjectGuid>42E112E3-4CB2-4274-AA21-7B952D488F8D</ProjectGuid>
   </PropertyGroup>
-  
   <ItemGroup>
     <PackageReference Include="Catel.Core" Version="5.12.6-beta0005" />
     <PackageReference Include="Catel.Fody" Version="4.4.4" PrivateAssets="all" />
@@ -30,7 +30,6 @@
     <PackageReference Include="Orc.EntityFramework6" Version="4.0.0-alpha0353" />
     <PackageReference Include="Portable.Licensing" Version="1.1.0" />
   </ItemGroup>
-
   <ItemGroup>
     <Compile Update="_T4\UoW.cs">
       <DesignTime>True</DesignTime>
@@ -42,7 +41,6 @@
       <LastGenOutput>UoW.cs</LastGenOutput>
     </None>
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Update="NETStandard.Library" Version="2.0.3" />
   </ItemGroup>

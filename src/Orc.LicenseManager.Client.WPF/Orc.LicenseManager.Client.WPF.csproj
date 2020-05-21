@@ -1,6 +1,7 @@
-﻿<Project Sdk="MSBuild.Sdk.Extras">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="MSBuild.Sdk.Extras">
   <PropertyGroup>
-    <TargetFrameworks>net46;net47;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net46;net472;netcoreapp3.0</TargetFrameworks>
     <AssemblyName>Orc.LicenseManager.Client.WPF</AssemblyName>
     <RootNamespace>Orc.LicenseManager</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
@@ -16,7 +17,6 @@
     <ExtrasEnableImplicitWpfReferences>true</ExtrasEnableImplicitWpfReferences>
     <ExtrasEnableImplicitWinFormsReferences>true</ExtrasEnableImplicitWinFormsReferences>
   </PropertyGroup>
-
   <PropertyGroup>
     <!-- SonarQube requires a project guid -->
     <ProjectGuid>3C2F09AC-F23F-439F-BB6F-A502241CA829</ProjectGuid>
