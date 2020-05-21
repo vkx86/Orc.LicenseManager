@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="MSBuild.Sdk.Extras">
   <PropertyGroup>
     <TargetFrameworks>net46;net472;netcoreapp3.0</TargetFrameworks>
@@ -6,11 +6,10 @@
     <RootNamespace>Orc.LicenseManager</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <PackageId>Orc.LicenseManager.Client.WPF</PackageId>
-    <PackageVersion>1.0.0-alpha0001</PackageVersion>
+    <PackageVersion>4.0.0-alpha0171</PackageVersion>
     <Description>LicenseManager - WPF client library.</Description>
     <PackageTags>orc;license;client;xaml;wpf</PackageTags>
   </PropertyGroup>
-
   <PropertyGroup>
     <UseWpf>true</UseWpf>
     <UseWindowsForms>true</UseWindowsForms>
@@ -21,7 +20,6 @@
     <!-- SonarQube requires a project guid -->
     <ProjectGuid>3C2F09AC-F23F-439F-BB6F-A502241CA829</ProjectGuid>
   </PropertyGroup>
-  
   <ItemGroup>
     <PackageReference Include="Catel.Fody" Version="4.4.4" PrivateAssets="all" />
     <PackageReference Include="Catel.MVVM" Version="5.12.6-beta0005" />
@@ -33,15 +31,12 @@
     <PackageReference Include="ModuleInit.Fody" Version="2.1.0" PrivateAssets="all" />
     <PackageReference Include="Obsolete.Fody" Version="5.2.1" PrivateAssets="all" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Orc.LicenseManager.Client\Orc.LicenseManager.Client.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Update="NETStandard.Library" Version="2.0.3" />
   </ItemGroup>
-
   <Import Project="$(MSBuildProjectDirectory)\..\Directory.build.shared.explicit.props" Condition="Exists('$(MSBuildProjectDirectory)\..\Directory.build.shared.explicit.props')" />
   <Import Project="$(MSBuildProjectDirectory)\..\Directory.build.shared.mat.props" Condition="Exists('$(MSBuildProjectDirectory)\..\Directory.build.shared.mat.props')" />
 </Project>

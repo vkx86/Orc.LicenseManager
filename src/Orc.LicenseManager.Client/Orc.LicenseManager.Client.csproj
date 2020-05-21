@@ -1,20 +1,19 @@
-﻿<Project Sdk="MSBuild.Sdk.Extras">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="MSBuild.Sdk.Extras">
   <PropertyGroup>
     <TargetFrameworks>net46;net472;netcoreapp3.0</TargetFrameworks>
     <AssemblyName>Orc.LicenseManager.Client</AssemblyName>
     <RootNamespace>Orc.LicenseManager</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <PackageId>Orc.LicenseManager.Client</PackageId>
-    <PackageVersion>1.0.0-alpha0001</PackageVersion>
+    <PackageVersion>4.0.0-alpha0171</PackageVersion>
     <Description>LicenseManager - client library.</Description>
     <PackageTags>orc;license;client</PackageTags>
   </PropertyGroup>
-
   <PropertyGroup>
     <!-- SonarQube requires a project guid -->
     <ProjectGuid>673E6FB6-2042-44D0-9767-A41B45DAD42E</ProjectGuid>
   </PropertyGroup>
-  
   <ItemGroup>
     <PackageReference Include="Catel.Core" Version="5.12.6-beta0005" />
     <PackageReference Include="Catel.Fody" Version="4.4.4" PrivateAssets="all" />
@@ -45,11 +44,15 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Update="NETStandard.Library" Version="2.0.3" />
   </ItemGroup>
-
   <Import Project="$(MSBuildProjectDirectory)\..\Directory.build.shared.explicit.props" Condition="Exists('$(MSBuildProjectDirectory)\..\Directory.build.shared.explicit.props')" />
   <Import Project="$(MSBuildProjectDirectory)\..\Directory.build.shared.mat.props" Condition="Exists('$(MSBuildProjectDirectory)\..\Directory.build.shared.mat.props')" />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <SourceRoot Include="C:\Users\developer\source\repos\vkx86-Orc.LicenseManager\" RepositoryUrl="https://github.com/WildGums/Orc.LicenseManager" SourceControl="git" RevisionId="89511d50cfeff7c4cf6c06f89eb041563d6078db" />
+  </ItemGroup>
 </Project>
