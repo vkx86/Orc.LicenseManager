@@ -1,27 +1,25 @@
-﻿<Project Sdk="MSBuild.Sdk.Extras">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="MSBuild.Sdk.Extras">
   <PropertyGroup>
-    <TargetFrameworks>net46;net47;netcoreapp3.0</TargetFrameworks>
+    <TargetFrameworks>net46;net472;netcoreapp3.0</TargetFrameworks>
     <AssemblyName>Orc.LicenseManager.Client.WPF</AssemblyName>
     <RootNamespace>Orc.LicenseManager</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <PackageId>Orc.LicenseManager.Client.WPF</PackageId>
-    <PackageVersion>1.0.0-alpha0001</PackageVersion>
+    <PackageVersion>3.2.0</PackageVersion>
     <Description>LicenseManager - WPF client library.</Description>
     <PackageTags>orc;license;client;xaml;wpf</PackageTags>
   </PropertyGroup>
-
   <PropertyGroup>
     <UseWpf>true</UseWpf>
     <UseWindowsForms>true</UseWindowsForms>
     <ExtrasEnableImplicitWpfReferences>true</ExtrasEnableImplicitWpfReferences>
     <ExtrasEnableImplicitWinFormsReferences>true</ExtrasEnableImplicitWinFormsReferences>
   </PropertyGroup>
-
   <PropertyGroup>
     <!-- SonarQube requires a project guid -->
     <ProjectGuid>3C2F09AC-F23F-439F-BB6F-A502241CA829</ProjectGuid>
   </PropertyGroup>
-  
   <ItemGroup>
     <PackageReference Include="Catel.Analyzers" Version="1.0.0" PrivateAssets="all" />
     <PackageReference Include="Catel.Fody" Version="4.3.0" PrivateAssets="all" />
@@ -35,11 +33,9 @@
     <PackageReference Include="Obsolete.Fody" Version="5.2.0" PrivateAssets="all" />
     <PackageReference Include="WpfAnalyzers" Version="2.2.0.2" PrivateAssets="all" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Orc.LicenseManager.Client\Orc.LicenseManager.Client.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -47,18 +43,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
-
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Update="NETStandard.Library" Version="2.0.1" />
   </ItemGroup>
-
   <Import Project="$(MSBuildProjectDirectory)\..\Directory.build.shared.explicit.props" Condition="Exists('$(MSBuildProjectDirectory)\..\Directory.build.shared.explicit.props')" />
   <Import Project="$(MSBuildProjectDirectory)\..\Directory.build.shared.mat.props" Condition="Exists('$(MSBuildProjectDirectory)\..\Directory.build.shared.mat.props')" />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63127-02" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <SourceRoot Include="C:\Users\developer\source\repos\vkx86-Orc.LicenseManager\" RepositoryUrl="https://github.com/WildGums/Orc.LicenseManager" SourceControl="git" RevisionId="d92c4e6687a682f77ea5280926d44b727e52ccce" />
+  </ItemGroup>
 </Project>

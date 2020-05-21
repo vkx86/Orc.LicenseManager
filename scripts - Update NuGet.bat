@@ -1,1 +1,1 @@
-tools\nuget\nuget.exe update -self
+tools\nuget.exe update -self
